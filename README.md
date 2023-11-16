@@ -9,7 +9,6 @@ SlidesCleaner est un outil conçu pour simplifier la révision des textes dans v
 
 - Correction automatique des fautes d'orthographe et de grammaire dans Google Slides.
 - Intégration transparente avec l'API OpenAI pour des corrections intelligentes et contextuelles.
-- Interface graphique simple pour une utilisation aisée.
 
 ## Technologies Utilisées
 
