@@ -21,7 +21,7 @@ SlidesCleaner est un outil conçu pour simplifier la révision des textes dans v
 Clonez le dépôt :
 
 ```bash
-git clone [[URL du dépôt]](https://github.com/DamienMescudi/SlidesCleaner)
+git clone https://github.com/DamienMescudi/SlidesCleaner
 ```
 
 Installez les dépendances nécessaires :
