@@ -20,3 +20,10 @@ Clonez le dépôt :
 
 ```bash
 git clone https://github.com/DamienMescudi/SlidesCleaner
+
+## Installation
+
+Installez les dépendances nécessaires :
+
+```bash
+pip install -r requirements.txt
