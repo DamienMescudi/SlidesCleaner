@@ -11,14 +11,9 @@ SlidesCleaner est un outil conçu pour simplifier la révision des textes dans v
 
   
 ## Pré-requis
+- Python
 - Token OpenAI
 - Compte Google Cloud Platform (L'utilisation de l'API Google Slides etant gratuite)
-
-## Technologies Utilisées
-- Python
-- Google Slides API
-- OpenAI API
-- Tkinter pour l'interface graphique
 
 ## Installation
 Clonez le dépôt :
