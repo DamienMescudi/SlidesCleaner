@@ -56,7 +56,7 @@ Obtenez une clé API d'OpenAI et ajoutez-la à un fichier `config/settings.json`
 Exécutez l'application via l'interface graphique en lançant le script :
 
 ```bash
-python slides_cleaner.py
+python script.py
 ```
 
 Entrez l'ID de votre présentation Google Slides et le script corrigera le texte des diapositives.
