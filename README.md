@@ -1,6 +1,7 @@
 
 # SlidesCleaner
-https://github.com/DamienMescudi/SlidesCleaner/assets/65304734/4233ca32-9729-4f9f-a5bc-59fe03c0590a
+https://github.com/DamienMescudi/SlidesCleaner/assets/65304734/bc268e53-5ae4-4518-8176-3e67ae7d61f7
+
 
 SlidesCleaner est un outil conçu pour simplifier la révision des textes dans vos présentations Google Slides. Utilisant l'API OpenAI, ce script Python corrige automatiquement les erreurs d'orthographe et de grammaire, vous permettant de vous concentrer sur le fond de votre présentation plutôt que sur la forme.
 
