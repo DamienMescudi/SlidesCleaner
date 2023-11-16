@@ -20,15 +20,15 @@ SlidesCleaner est un outil conçu pour simplifier la révision des textes dans v
 
 Clonez le dépôt :
 
-\```bash
+```bash
 git clone [[URL du dépôt]](https://github.com/DamienMescudi/SlidesCleaner)
-\```
+```
 
 Installez les dépendances nécessaires :
 
-\```bash
+```bash
 pip install -r requirements.txt
-\```
+```
 
 ## Configuration
 
@@ -45,19 +45,19 @@ Pour utiliser SlidesCleaner, vous devez configurer un compte de service Google :
 
 Obtenez une clé API d'OpenAI et ajoutez-la à un fichier `config/settings.json` sous la forme :
 
-\```json
+```json
 {
     "openai_api_key": "VOTRE_CLÉ_API"
 }
-\```
+```
 
 ## Utilisation
 
 Exécutez l'application via l'interface graphique en lançant le script :
 
-\```bash
+```bash
 python slides_cleaner.py
-\```
+```
 
 Entrez l'ID de votre présentation Google Slides et le script corrigera le texte des diapositives.
 
