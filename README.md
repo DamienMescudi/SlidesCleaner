@@ -2,18 +2,16 @@
 # SlidesCleaner (avec l'API ChatGPT)
 SlidesCleaner est un outil conçu pour simplifier la révision des textes dans vos présentations Google Slides. Utilisant l'API OpenAI, ce script Python corrige automatiquement les erreurs d'orthographe et de grammaire, vous permettant de vous concentrer sur le fond de votre présentation plutôt que sur la forme.
 
-https://github.com/DamienMescudi/SlidesCleaner/assets/65304734/bc268e53-5ae4-4518-8176-3e67ae7d61f7
-
 
 ## Fonctionnalités
 - Correction automatique des fautes d'orthographe et de grammaire dans Google Slides.
 - Intégration transparente avec l'API OpenAI pour des corrections intelligentes et contextuelles.
+- Option de correction automatique sans validation manuelle via l'interface de ligne de commande (CLI).
 
-  
 ## Pré-requis
 - Python
 - Token OpenAI
-- Compte Google Cloud Platform (L'utilisation de l'API Google Slides etant gratuite)
+- Compte Google Cloud Platform (L'utilisation de l'API Google Slides étant gratuite)
 
 ## Installation
 Clonez le dépôt :
@@ -48,11 +46,10 @@ Obtenez une clé API d'OpenAI et ajoutez-la à un fichier `config/settings.json`
 ```
 
 ## Utilisation
-Exécutez l'application via l'interface graphique en lançant le script :
+Exécutez le script via l'interface de ligne de commande (CLI) en utilisant :
 
 ```bash
-python script.py
+python main.py [ID_PRÉSENTATION] --model [MODÈLE_OPENAI]
 ```
 
-Entrez l'ID de votre présentation Google Slides et le script corrigera automatiquement le texte des diapositives.
-
+Optionnellement, activez la correction automatique sans validation manuelle en ajoutant l'argument `--auto-correct`.

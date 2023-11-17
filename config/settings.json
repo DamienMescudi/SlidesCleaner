@@ -1,3 +1,4 @@
 {
+    "google_service_account_file": "config/credentials.json",
     "openai_api_key": "YOU_OPENAI_TOKEN"
 }
