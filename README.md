@@ -51,8 +51,22 @@ Obtenez une clé API d'OpenAI et ajoutez-la à un fichier `config/settings.json`
 Exécutez l'application via l'interface graphique en lançant le script :
 
 ```bash
-python script.py
+usage: slidecleaner.py [-h] [--id ID] [--apply] [--verbose]
+                       [--service-account SERVICE_ACCOUNT] [--model MODEL]
+                       [--prompt-override PROMPT_OVERRIDE]
+
+options:
+  -h, --help            show this help message and exit
+  --id ID               ID of the Google Slide
+  --apply, -a           Apply the changes to the Google Slide (otherwise, just print
+                        the changes)
+  --verbose, -v         Print verbose output
+  --service-account SERVICE_ACCOUNT, -s SERVICE_ACCOUNT
+                        Path to the service account file
+  --model MODEL, -m MODEL
+                        The model to use for OpenAI (default: gpt-3.5-turbo)
+  --prompt-override PROMPT_OVERRIDE, -p PROMPT_OVERRIDE
+                        Override the prompt to use for OpenAI
 ```
 
-Entrez l'ID de votre présentation Google Slides et le script corrigera automatiquement le texte des diapositives.
-
+TODO: Add proper difftool support for Windows (and better document it for Linux / Mac)
