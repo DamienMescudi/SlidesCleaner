@@ -49,7 +49,11 @@ Obtenez une clé API d'OpenAI et ajoutez-la à un fichier `config/settings.json`
 Exécutez le script via l'interface de ligne de commande (CLI) en utilisant :
 
 ```bash
-python main.py [ID_PRÉSENTATION] --model [MODÈLE_OPENAI]
+python main.py [ID_PRÉSENTATION]
 ```
 
-Optionnellement, activez la correction automatique sans validation manuelle en ajoutant l'argument `--auto-correct`.
+`--auto-correct` - Pour corriger automatiquement (Risque d'incompréhenssion - Exemple : "Salut les copins" peut devenir "Salut les copains" au lieu de "Salut les copines".)
+`--guivalid` - Pour valider avec une interface graphique (Sinon validation en CLI)
+`--model` - Pour sélectionner un model parmi ceux proposé par [OpenAi](https://console.cloud.google.com/)
+
+
