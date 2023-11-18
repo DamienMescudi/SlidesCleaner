@@ -54,6 +54,6 @@ python main.py [ID_PRÉSENTATION]
 
 - `--auto-correct` - Pour corriger automatiquement (Risque d'incompréhension - Exemple : "Salut les copins" peut devenir "Salut les copains" au lieu de "Salut les copines".).
 - `--guivalid` - Pour valider avec une interface graphique (Sinon validation en CLI).
-- `--model` - Pour sélectionner un model parmi ceux proposé par [OpenAi](https://console.cloud.google.com/).
+- `--model` - Pour sélectionner un model parmi ceux proposé par [OpenAi](https://console.cloud.google.com/) (GPT3.5 Turbo par default)
 
 
