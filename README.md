@@ -34,7 +34,7 @@ Pour utiliser SlidesCleaner, vous devez configurer un compte de service Google :
 1. Visitez [Google Cloud Console](https://console.cloud.google.com/) et créez ou sélectionnez un projet.
 2. Activez Google Slides API pour votre projet.
 3. Créez un compte de service et téléchargez le fichier de clé JSON.
-4. Placez le fichier de clé JSON dans le dossier du projet et renommez-le en `credentials.json`.
+4. Placez le fichier de clé JSON dans le dossier config du projet et renommez-le en `credentials.json`.
 
 ### Configuration de l'API Key OpenAI
 Obtenez une clé API d'OpenAI et ajoutez-la à un fichier `config/settings.json` sous la forme :
