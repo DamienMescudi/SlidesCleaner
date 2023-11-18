@@ -11,8 +11,11 @@ def authenticate_google_api(service_account_file):
 
 def get_presentation_text(service, presentation_id):
     presentation = service.presentations().get(presentationId=presentation_id).execute()
-    text_elements = {}
+    text_elements = []
+    slide_number = 0  # Initialiser le compteur de slides
+
     for slide in presentation.get('slides', []):
+        slide_number += 1  # Incrémenter le numéro de la slide
         for element in slide.get('pageElements', []):
             if 'shape' in element and 'text' in element['shape']:
                 element_id = element['objectId']
@@ -20,8 +23,10 @@ def get_presentation_text(service, presentation_id):
                 for text_run in element['shape']['text']['textElements']:
                     if 'textRun' in text_run:
                         text_content += text_run['textRun']['content']
-                text_elements[element_id] = text_content
+                text_elements.append((element_id, text_content, slide_number))  # Utiliser slide_number ici
     return text_elements
+
+
 
 def update_slide_text(service, presentation_id, element_id, new_text):
     requests = [

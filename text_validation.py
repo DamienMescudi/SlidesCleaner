@@ -1,7 +1,13 @@
 import tkinter as tk
+from tkinter import PhotoImage
+from PIL import Image, ImageTk
 import difflib
 
 def validate_correction(original_text, corrected_text):
+    # Vérifie si le texte corrigé est différent du texte original
+    if original_text.strip() == corrected_text.strip():
+        return {"approved": True, "text": corrected_text}
+
     user_decision = {"approved": False, "text": corrected_text}
 
     def on_approve():
@@ -37,13 +43,24 @@ def validate_correction(original_text, corrected_text):
     # Appliquer les tags pour mettre en évidence les différences
     highlight_differences(original_text, corrected_text, original_textbox, corrected_textbox)
 
+    # Charger et redimensionner les images pour les boutons
+    approve_img = Image.open('images/o.png')  # Remplacer par le chemin de votre image
+    approve_img = approve_img.resize((110, 110), Image.Resampling.LANCZOS)
+    approve_img = ImageTk.PhotoImage(approve_img)
+
+    reject_img = Image.open('images/n.png')    # Remplacer par le chemin de votre image
+    reject_img = reject_img.resize((110, 110), Image.Resampling.LANCZOS)
+    reject_img = ImageTk.PhotoImage(reject_img)
+
     # Bouton pour approuver la modification
-    approve_button = tk.Button(root, text="Approuver", command=on_approve)
-    approve_button.pack(side=tk.LEFT, padx=5, pady=5)
+    approve_button = tk.Button(root, image=approve_img, command=on_approve, borderwidth=0)
+    approve_button.image = approve_img
+    approve_button.pack(side=tk.RIGHT, padx=80, pady=80)
 
     # Bouton pour rejeter la modification
-    reject_button = tk.Button(root, text="Rejeter", command=on_reject)
-    reject_button.pack(side=tk.RIGHT, padx=5, pady=5)
+    reject_button = tk.Button(root, image=reject_img, command=on_reject, borderwidth=0)
+    reject_button.image = reject_img
+    reject_button.pack(side=tk.LEFT, padx=80, pady=80)
 
     root.mainloop()
 
@@ -73,4 +90,3 @@ def highlight_differences(original, corrected, original_text_widget, corrected_t
             n_chars = sum(len(word) + 1 for word in original_words[i1:i2])
             original_index += n_chars
             corrected_index += n_chars
-
